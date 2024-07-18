@@ -6,26 +6,29 @@ Questo repository contiene la configurazione e gli schemi per un blog implementa
 
 Per iniziare con questo progetto, segui questi passaggi:
 
-1. Registra un account su: 
+1. Registra un account su:
 
    _https://www.sanity.io/
 
 2.  Crea un nuovo progetto dal tuo pannello di controllo sanity:
 
    _https://www.sanity.io/manage_
-   
+
 3. Clona il repository
 
-4. Installa Sanity CLI globalmente (se non l'hai già fatto): 
+4. Installa Sanity CLI globalmente (se non l'hai già fatto):
 
      _npm install -g @sanity/cli_
 
 5. Naviga nella directory del progetto e installa le dipendenze:
 
      _cd nome-progetto_
-   
-     _npm install_  
 
+     _npm install_
+
+6. Crea un file .env nella root del tuo progetto (se non esiste già) e aggiungi la tua variabile d'ambiente:
+
+SANITY_STUDIO_PROJECT_ID=il_tuo_project_id (lo prendi dal pannello selezionando il progetto appena creato, lì dovresti trovare il PROJECT ID [sanity/studio](https://www.sanity.io/manage_))
 
 ## Struttura del Progetto
 
@@ -44,13 +47,13 @@ Puoi personalizzare gli schemi esistenti o aggiungerne di nuovi modificando i fi
 
 ## Utilizzo
 
-Dopo aver configurato il progetto, puoi avviare lo Studio Sanity localmente con:
+Dopo aver configurato il progetto, puoi avviare lo Studio Sanity localmente avviando il progetto in locale:
 
-  _sanity start_
+  _npm run dev_
 
-  _sanity deploy_
+Questo renderà il tuo Studio accessibile online all'indirizzo:
 
-Questo renderà il tuo Studio accessibile online.
+    http://localhost:3333/
 
 ## Integrazione Frontend
 
