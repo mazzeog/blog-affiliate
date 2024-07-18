@@ -28,7 +28,18 @@ Per iniziare con questo progetto, segui questi passaggi:
 
 6. Crea un file .env nella root del tuo progetto (se non esiste già) e aggiungi la tua variabile d'ambiente:
 
-SANITY_STUDIO_PROJECT_ID=il_tuo_project_id (lo prendi dal pannello selezionando il progetto appena creato, lì dovresti trovare il PROJECT ID [sanity/studio](https://www.sanity.io/manage_))
+    _SANITY_STUDIO_PROJECT_ID=il_tuo_project_id (lo prendi dal pannello selezionando il progetto appena creato, lì dovresti trovare il PROJECT ID [sanity/studio](https://www.sanity.io/manage_))_
+
+7.  Modifica il file sanity.cli.ts con la tua variabile d'ambiente SANITY_STUDIO_PROJECT_ID
+
+    export default defineCliConfig({
+        api: {
+                projectId: process.env.SANITY_STUDIO_PROJECT_ID,
+                dataset: 'production'
+        }
+    })
+
+
 
 ## Struttura del Progetto
 
