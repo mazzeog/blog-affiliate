@@ -12,7 +12,7 @@ Per iniziare con questo progetto, segui questi passaggi:
 
 2.  Crea un nuovo progetto dal tuo pannello di controllo sanity:
 
-   https://www.sanity.io/manage
+    https://www.sanity.io/manage
 
 3. Clona il repository
 
