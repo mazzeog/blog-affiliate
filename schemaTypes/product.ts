@@ -20,9 +20,53 @@ export const product = defineType({
       },
     }),
     defineField({
-      name: 'description',
-      title: 'Descrizione',
-      type: 'text',
+      name: 'brand',
+      title: 'Marca',
+      type: 'reference',
+      to: [{type: 'brand'}],
+      validation: Rule => Rule.required(),
+    }),
+    defineField({
+      name: 'category',
+      title: 'Categoria',
+      type: 'reference',
+      to: [{type: 'category'}],
+      validation: Rule => Rule.required(),
+    }),
+    defineField({
+      name: 'productDescription',
+      title: 'Descrizione Prodotto',
+      type: 'object',
+      fields: [
+        {
+          name: 'whatItDoes',
+          title: 'Cosa fa questo prodotto?',
+          type: 'array',
+          of: [{type: 'block'}],
+          description: 'Descrivi la funzione e i benefici principali del prodotto'
+        },
+        {
+          name: 'howToUse',
+          title: 'Come si usa?',
+          type: 'array',
+          of: [{type: 'block'}],
+          description: 'Fornisci istruzioni chiare su come utilizzare il prodotto'
+        },
+        {
+          name: 'keyFeatures',
+          title: 'Quali sono le caratteristiche principali?',
+          type: 'array',
+          of: [{type: 'block'}],
+          description: 'Elenca le caratteristiche o i componenti principali del prodotto'
+        },
+        {
+          name: 'suitableFor',
+          title: 'Per chi è adatto?',
+          type: 'array',
+          of: [{type: 'block'}],
+          description: 'Specifica il pubblico target e i risultati attesi'
+        }
+      ]
     }),
     defineField({
       name: 'price',
@@ -39,4 +83,3 @@ export const product = defineType({
     }),
   ],
 })
-
